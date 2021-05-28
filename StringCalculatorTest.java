@@ -1,12 +1,12 @@
 import org.junit.Test;
+
+import junit.framework.Assert;
+
 public class StringCalculatorTest {
-    @Test(expected = RuntimeException.class)
-    public final void whenMoreThanTwoNumberUsed(){
-        StringCalculator.add("1,4,6,7");
-    }
+
 
     @Test
-    public final void whenStringIsEmpty(){
-        Assert.assertEquals(0, StringCalculator.add(""));
+    public final void whenAnyNumberOfNumbersUsed() {
+        Assert.assertEquals(3+6+15+18+46+33, StringCalculator.add("3,6,15,18,46,33"));
     }
 }

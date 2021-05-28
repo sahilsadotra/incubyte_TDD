@@ -3,7 +3,7 @@ import org.junit.Test;
 import junit.framework.Assert;
 
 public class StringCalculatorTest {
-
+    
 
     @Test
     public final void whenAnyNumberOfNumbersUsed() {

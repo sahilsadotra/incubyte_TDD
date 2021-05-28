@@ -1,7 +1,7 @@
 import org.junit.Test;
 import junit.framework.Assert;
 public class StringCalculatorTest {
-    
+
     @Test
     public final void whenStringIsEmpty(){
         Assert.assertEquals(0, StringCalculator.add(""));
@@ -32,5 +32,10 @@ public class StringCalculatorTest {
         }
         Assert.assertNotNull(exception);
         Assert.assertEquals("Negatives not allowed: [-6, -18]", exception.getMessage());
+    }
+
+    @Test
+    public final void whenOneOrMoreNumbersAreMoreThan1000() {
+        Assert.assertEquals(2+1000+6+9, StringCalculator.add("2,1000,1001,6,1234,9"));
     }
 }
